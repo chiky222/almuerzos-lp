@@ -10,26 +10,46 @@ const Formulario = () => {
   const menus = [
     '',
     'Bastoncitos de Pollo con Buñuelos de Acelga',
-    '2 (dos) Minitartas: Napolitana o Verdura',
+    '2 (dos) Minitartas: Napolitana, Verdura o Calabaza y queso',
     'Ensalada de arroz, jamón, queso, huevo y tomate',
     'Milanesa de pollo con tortilla de papa',
     '3 (tres) Empanadas de pollo o carne',
-    'Menú6',
-    'Menú7',
-    'Menú8',
-    'Menú9',
-    'Menú10',
-    'Menú11',
-    'Menú12',
-    'Menú13',
-    'Menú14',
-    'Menú15',
-    'Menú16',
-    'Menú17',
-    'Menú18',
-    'Menú19',
-    'Menú20',
+    'Ensalada Rusa: Pollo, papas, arvejas, zanahoria, huevo y mayonesa',
+    'Ensalada Cesar con Pollo / Ensalada de Lentejas',
+    'Ensalada de atún: con papas o con arroz',
+    'Ensalada Primavera: arroz, jamón, queso, huevos y tomates cherry',
+    'Ensalada "Almuerzos": 3 lechugas, tomate, zanahoria y pollo',
+    'Sandwich de Milanesa completo',
+    'Milanesa (frita o al horno) con Ensalada',
+    'Torre de Panqueques',
+    'Pebete completo: jamón, queso, lechuga, tomate y huevo',
+    'Pebete de jamón y queso',
+    'Ñoquis con Bolognesa o Salsa Rosa',
+    'Tomates Rellenos',
+    'Escalopes de Ternera con Ensaladas (varias)',
+    'Milanesa de pollo con Papas al horno o Ensalada',
+    'Hamburguesas Caseras con revuelto de zapallitos o Ensalada Rusa',
+    'Filet de Merluza o Bifecitos de Cerdo con puré mixto',
+    '2 (dos) Omelette de verdura o jamón y queso',
+    'Canelones de verdura con tuco y salsa blanca',
+    'Ternerita guisada: arroz, verduras, carne, lentejas, papas y salsa',
+    'Pastel de papas y/o calabaza',
+    'Milanesa napolitana de ternera con puré de papas',
+    'Lasagna',
+    'Tirabuzones con salsa 4 quesos',
+    'Milanesa de pollo (al horno o frita) con papas rústicas o ensalada',
+    'Risotto con pollo y vegetales',
+    'Milanesa de pollo con papas y batatas fritas',
+    'Pollo al horno con papas',
+    '3 (tres) Crepe de verduras, pollo y salsa blanca',
+    'Revuelto de Gramajo',
+    'Pollo crocante con bombas de papa',
+    'Raviolones de verdura con salsa rosa o bolognesa',
+    'Sorrentinos de jamón y queso con tuco o salsa rosa',
+    'Wok de vegetales, pollo y arroz'
   ];
+
+  const menuOrdenado = menus.sort();
 
   const {datos, setDatos} = useContext(Contexto);
 
@@ -55,7 +75,7 @@ const Formulario = () => {
                     <label htmlFor="lunes" className="formulario__label">Lunes:</label>
                     <div className="formulario__grupo-input">
                         <select name='lunes' className='formulario__selector' id='lunes' value={data.lunes} onChange={handleChange} >
-                            {menus.map((menu) => {
+                            {menuOrdenado.map((menu) => {
                                 const idOption = uuidv4();
                                 return (
                                     <option id={idOption} key={idOption}>{menu}</option>
@@ -68,7 +88,7 @@ const Formulario = () => {
                     <label htmlFor="martes" className="formulario__label">Martes:</label>
                     <div className="formulario__grupo-input">
                         <select name='martes' className='formulario__selector' id='martes' value={data.martes} onChange={handleChange} >
-                            {menus.map((menu) => {
+                            {menuOrdenado.map((menu) => {
                                 const idOption = uuidv4();
                                 return (
                                     <option id={idOption} key={idOption}>{menu}</option>
@@ -81,7 +101,7 @@ const Formulario = () => {
                     <label htmlFor="miercoles" className="formulario__label">Miércoles:</label>
                     <div className="formulario__grupo-input">
                         <select name='miercoles' className='formulario__selector' id='miercoles' value={data.miercoles} onChange={handleChange} >
-                            {menus.map((menu) => {
+                            {menuOrdenado.map((menu) => {
                                 const idOption = uuidv4();
                                 return (
                                     <option id={idOption} key={idOption}>{menu}</option>
@@ -94,7 +114,7 @@ const Formulario = () => {
                     <label htmlFor="jueves" className="formulario__label">Jueves:</label>
                     <div className="formulario__grupo-input">
                         <select name='jueves' className='formulario__selector' id='jueves' value={data.jueves} onChange={handleChange} >
-                            {menus.map((menu) => {
+                            {menuOrdenado.map((menu) => {
                                 const idOption = uuidv4();
                                 return (
                                     <option id={idOption} key={idOption}>{menu}</option>
@@ -107,7 +127,7 @@ const Formulario = () => {
                     <label htmlFor="viernes" className="formulario__label">Viernes:</label>
                     <div className="formulario__grupo-input">
                         <select name='viernes' className='formulario__selector' id='viernes' value={data.viernes} onChange={handleChange} >
-                            {menus.map((menu) => {
+                            {menuOrdenado.map((menu) => {
                                 const idOption = uuidv4();
                                 return (
                                     <option id={idOption} key={idOption}>{menu}</option>
