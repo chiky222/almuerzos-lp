@@ -6,7 +6,7 @@ import { Contexto } from '../context/contexto';
 
 const Formulario = () => {
 
-  const [data, setData] = useState({ lunes: 'Seleccionar', martes: 'Seleccionar', miercoles: 'Seleccionar', jueves: 'Seleccionar', viernes: 'Seleccionar'});
+  const [data, setData] = useState({ lunes: '', martes: '', miercoles: '', jueves: '', viernes: ''});
   const menus = [
     '',
     'Bastoncitos de Pollo con Buñuelos de Acelga',
