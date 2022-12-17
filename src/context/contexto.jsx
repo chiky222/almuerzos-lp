@@ -7,10 +7,11 @@ const CartProvider = ({ children }) => {
 
     const [datos, setDatos] = useState({});
     const [dia, setDia] = useState('');
+    const [fondo, setFondo] = useState(''); 
 
     const cambiarFondo = (newFondo) => {
-        var semanal = document.getElementById("semanal");
-        var diario = document.getElementById("diario");
+        const semanal = document.getElementById("semanal");
+        const diario = document.getElementById("diario");
 
         if (semanal && diario) {
             const ruta = `url(${newFondo})`;
@@ -20,7 +21,7 @@ const CartProvider = ({ children }) => {
     }
 
     return (
-        <Contexto.Provider value={{ cambiarFondo, datos, setDatos, dia, setDia }}>
+        <Contexto.Provider value={{ cambiarFondo, datos, setDatos, dia, setDia, fondo, setFondo }}>
             {children}
         </Contexto.Provider>
     );
